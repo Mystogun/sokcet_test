@@ -2,7 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from "socket.io";
 import { createAdapter } from "@socket.io/cluster-adapter";
-import { setupWorker  } from "@socket.io/sticky";
+import { setupWorker } from "@socket.io/sticky";
 
 
 const app = express();
@@ -38,5 +38,8 @@ io.on('connection', (socket) => {
 });
 
 server.listen(process.env.NODE_PORT || 3000, () => {
-    console.log('listening on *:3000');
+    if (process.env.NODE_PORT)
+        console.log(`listening on *:${process.env.NODE_PORT}`);
+    else
+        console.log('listening on *:3000');
 });
