@@ -38,5 +38,8 @@ io.on('connection', (socket) => {
 });
 
 server.listen(process.env.NODE_PORT || 3000, () => {
-    console.log('listening on *:3000');
+    if (process.env.NODE_PORT)
+        console.log(`listening on *:${process.env.NODE_PORT}`);
+    else
+        console.log('listening on *:3000');
 });
