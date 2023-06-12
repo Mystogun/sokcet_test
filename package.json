@@ -1,0 +1,14 @@
+{
+  "name": "socket_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "4",
+    "socket.io": "^4.6.1"
+  }
+}
