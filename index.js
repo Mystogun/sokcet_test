@@ -46,4 +46,5 @@ server.listen(process.env.NODE_PORT || 3000, () => {
 
 
     console.log('blah blah blah blah');
+    console.log('blah blah blah blah');
 });
